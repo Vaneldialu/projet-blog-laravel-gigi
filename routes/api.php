@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProfilUserController;
 
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\VueController;
@@ -37,6 +38,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::apiResource('/articles', ArticleController::class)->except('index');
     Route::apiResource('/categories', CategoryController::class);
     Route::apiResource('/comments', CommentController::class);
+    Route::get('/profil',ProfilUserController::class);
 });
 
 

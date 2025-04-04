@@ -20,22 +20,22 @@ class DatabaseSeeder extends Seeder
     {
 
 
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'gigi',
-        //     'email' => 'ggig19@gmail.com',
-        //     'password' => Hash::make('password'),
-        // ]);
-        // User::factory(20)->create();
-        // $this->call(CategorySeeder::class);
-        // $this->call(TagsSeeder::class);
+        User::factory()->create([
+            'name' => 'gigi',
+            'email' => 'ggig19@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
+        User::factory(20)->create();
+        $this->call(CategorySeeder::class);
+        $this->call(TagsSeeder::class);
    
 
         
 
 
-        // $this->call(ArcticleSeeder::class);
+        $this->call(ArcticleSeeder::class);
 
         $this->call(CommentSeeder::class);
 
